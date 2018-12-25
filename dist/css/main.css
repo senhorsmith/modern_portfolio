@@ -1,3 +1,70 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
 body {
   background: #444;
+  color: #fff;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7; }
+  body#bg__img {
+    background: url("/dist/img/background.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg__img::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(68, 68, 68, 0.9);
+      width: 100%;
+      height: 100%;
+      z-index: -1; }
+
+h1,
+h2,
+h3 {
+  font-weight: 400; }
+  h1.home__lg__heading,
+  h2.home__lg__heading,
+  h3.home__lg__heading {
+    font-size: 6rem; }
+  h1.home__sm__heading,
+  h2.home__sm__heading,
+  h3.home__sm__heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5); }
+
+a {
+  text-decoration: none;
   color: #fff; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.home__text__secondary {
+  color: #eece1a; }
+
+main {
+  padding: 4rem;
+  height: 100%; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+  main .home__icons {
+    margin-top: 1rem; }
+    main .home__icons a {
+      padding: 0.4rem; }
+      main .home__icons a:hover {
+        color: #eece1a;
+        transition: all 300ms ease; }
