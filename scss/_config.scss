@@ -14,7 +14,6 @@ $background-opacity: 0.9;
     &#bg__img {
       background: $home-image;
       background-attachment: fixed;
-      background-size: cover;
 
       &::after {
         content: "";
@@ -29,5 +28,42 @@ $background-opacity: 0.9;
         z-index: -1;
       }
     }
+  }
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Media Querys Mixins
+@mixin mediaSm {
+  // Small
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  // Medium
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  // Large
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  // Extra Large
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
